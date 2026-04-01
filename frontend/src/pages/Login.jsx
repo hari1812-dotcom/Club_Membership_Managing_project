@@ -43,12 +43,14 @@ export default function Login() {
             </h1>
             <p className="text-slate-500 mt-1">College Portal — Sign in</p>
           </div>
+
           <form onSubmit={handleSubmit} className="space-y-5">
             {error && (
               <div className="bg-red-50 text-red-700 text-sm px-4 py-3 rounded-lg">
                 {error}
               </div>
             )}
+
             <div>
               <label className="block text-sm font-medium text-slate-700 mb-1.5">
                 Email
@@ -62,6 +64,7 @@ export default function Login() {
                 required
               />
             </div>
+
             <div>
               <label className="block text-sm font-medium text-slate-700 mb-1.5">
                 Password
@@ -75,6 +78,7 @@ export default function Login() {
                 required
               />
             </div>
+
             <button
               type="submit"
               disabled={submitting}
@@ -83,12 +87,7 @@ export default function Login() {
               {submitting ? "Signing in…" : "Sign In"}
             </button>
           </form>
-          <p className="text-center text-slate-400 text-sm mt-6">
-            Use your college credentials. Role: Admin / Faculty / Student
-          </p>
-          <p className="text-center text-slate-400 text-xs mt-2">
-            Demo: admin@college.edu / admin123 (run <code className="bg-slate-100 px-1 rounded">npm run seed</code> in backend if needed)
-          </p>
+
         </div>
       </div>
     </div>

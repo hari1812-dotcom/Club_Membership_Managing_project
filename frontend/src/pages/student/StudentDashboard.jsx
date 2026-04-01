@@ -48,10 +48,10 @@ export default function StudentDashboard() {
   }, [refreshUser]);
 
   const points = user?.rewardPoints ?? 0;
-  const maxPoints = 1000;
+  const maxPoints = 5000;
   const progress = Math.min((points / maxPoints) * 100, 100);
-  const tier = points >= 500 ? { label: "Gold", bg: "bg-amber-100", text: "text-amber-700" }
-    : points >= 250 ? { label: "Silver", bg: "bg-slate-100", text: "text-slate-600" }
+  const tier = points >= 4000 ? { label: "Gold", bg: "bg-amber-100", text: "text-amber-700" }
+    : points >= 2000 ? { label: "Silver", bg: "bg-slate-100", text: "text-slate-600" }
     : { label: "Bronze", bg: "bg-orange-100", text: "text-orange-700" };
 
   return (
